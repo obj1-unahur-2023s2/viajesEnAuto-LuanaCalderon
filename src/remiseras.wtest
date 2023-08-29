@@ -1,0 +1,7 @@
+import remiseras.*
+
+test "testX" {
+
+	assert.that(true)
+
+}
