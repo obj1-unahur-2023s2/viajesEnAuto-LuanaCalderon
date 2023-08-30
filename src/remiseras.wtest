@@ -1,7 +1,13 @@
 import remiseras.*
+import clientes.*
 
-test "testX" {
+test "Lucia la remisera reemplaza a Mariela " {
+    lucia.reemplazaA(marianela)
+	assert.equals(180,lucia.precioViaje(ludmila,10))
+}
 
-	assert.that(true)
 
+test "Melina trabaja para Ludmila" {
+    melina.trabajaPara(ludmila)
+	assert.equals(180,gabriela.precioViaje(melina,10))
 }

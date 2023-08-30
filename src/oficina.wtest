@@ -1,0 +1,17 @@
+import oficina.*
+import remiseras.*
+import clientes.*
+
+test "Remiseras sin intercambiar" {
+    oficina.asignarRemiseras(roxana,juana)
+	assert.equals(roxana,oficina.primeraRemisera())
+	assert.equals(juana,oficina.segundaRemisera())
+	}
+	
+	
+test "Intercambio de remiseras" {
+    oficina.asignarRemiseras(roxana,juana)
+	oficina.intercambiarRemiseras()
+	assert.equals(juana,oficina.primeraRemisera())
+	assert.equals(roxana,oficina.segundaRemisera())
+}

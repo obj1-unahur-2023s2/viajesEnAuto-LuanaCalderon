@@ -12,10 +12,11 @@ object oficina {
 	
 	method primeraRemisera() = primeraOpcion 
 	method segundaRemisera() = segundaOpcion 
-	method cambiarPrimerRemiserarPor(remisera) {remisera.primeraRemisera()}
-	method cambiarSegundoRemiseraPor(remisera) {remisera.segundaRemisera()}
+	method cambiarPrimerRemiserarPor(remisera) {primeraOpcion = remisera}
+	method cambiarSegundoRemiseraPor(remisera) {segundaOpcion = remisera}
 	method intercambiarRemiseras() { self.asignarRemiseras(segundaOpcion,primeraOpcion) }
-	 method  remiseraElegidaParaViaje(cliente, km) = 
+	
+	method  remiseraElegidaParaViaje(cliente, km) = 
     	if (primeraOpcion.precioViaje(cliente,km) - segundaOpcion.precioViaje(cliente,km) > 30) 
  	    	segundaOpcion 
  	    else 
